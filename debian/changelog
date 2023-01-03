@@ -1,3 +1,21 @@
+libksba (1.6.0-2ubuntu0.2) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: integer overflow vulnerability in CRL signature parser
+    - debian/patches/CVE-2022-47629.patch: check for overflows and large
+      values in src/crl.c, src/ocsp.c.
+    - CVE-2022-47629
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Tue, 03 Jan 2023 09:44:19 -0500
+
+libksba (1.6.0-2ubuntu0.1) jammy-security; urgency=medium
+
+  * SECURITY UPDATE: integer overflow when reading tag-length objects
+    - debian/patches/CVE-2022-3515.patch: check for integer overflow
+      directly in the TLV parser
+    - CVE-2022-3515
+
+ -- Steve Beattie <steve.beattie@canonical.com>  Mon, 17 Oct 2022 17:07:14 -0700
+
 libksba (1.6.0-2build1) jammy; urgency=high
 
   * No change rebuild for ppc64el baseline bump.
